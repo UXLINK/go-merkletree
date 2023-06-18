@@ -38,7 +38,7 @@ func main() {
 	_ = tree.printTree()
 
     // proof
-    proofes, err := tree.GenerateProof("0x7e533CF779A533eD8f9C1b8E5C3d7F936335ca54")
+    proofes, err := tree.GenerateProof("0xeA726629EC5fe5cE300000d1a8c89B3054A22cE7")
     if err != nil {
         fmt.Printf("NewMerkleTree err:%v\n", err)
         return
@@ -48,7 +48,7 @@ func main() {
 		fmt.Printf("NewMerkleTree proofes:%+v\n", keccak256.Bytes2Hex(proof))
 	}
 
-	proof, err := tree.VerifyProof(proofes, "0x7e533CF779A533eD8f9C1b8E5C3d7F936335ca54")
+	proof, err := tree.VerifyProof(proofes, "0xeA726629EC5fe5cE300000d1a8c89B3054A22cE7")
     fmt.Printf("NewMerkleTree proof result:%+v\n", proof)
 }
 ```
@@ -91,7 +91,7 @@ func main() {
 	_ = tree.printTree()
 
     // proof
-    proofes, err := tree.GenerateProof("0x7e533CF779A533eD8f9C1b8E5C3d7F936335ca54")
+    proofes, err := tree.GenerateProof("0xeA726629EC5fe5cE300000d1a8c89B3054A22cE7")
     if err != nil {
         fmt.Printf("NewMerkleTree err:%v\n", err)
         return
@@ -101,7 +101,7 @@ func main() {
 		fmt.Printf("NewMerkleTree proofes:%+v\n", keccak256.Bytes2Hex(proof))
 	}
 
-	proof, err := tree.VerifyProof(proofes, "0x7e533CF779A533eD8f9C1b8E5C3d7F936335ca54")
+	proof, err := tree.VerifyProof(proofes, "0xeA726629EC5fe5cE300000d1a8c89B3054A22cE7")
     fmt.Printf("NewMerkleTree proof result:%+v\n", proof)
 }
 ```
