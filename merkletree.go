@@ -309,24 +309,24 @@ func (t *MerkleTree) getReferTreeByLeaf(leaf *db.TreeNode) ([]map[int]*db.TreeNo
 	return retSz, nil
 }
 
-func (t *MerkleTree) printTree() error {
+func (t *MerkleTree) PrintTree() error {
 	root, err := t.storage.FindRootNode(t.ctx, t.mtAddress)
 	if err != nil && err != db.ErrNotFound {
-		t.Error("printTree FindOneByLeafData err: ", err)
+		t.Error("PrintTree FindOneByLeafData err: ", err)
 		return err
 	}
 
 	level := root.Level
-	t.Error("printTree root: ", root)
+	t.Error("PrintTree root: ", root)
 	for i := level; i >= 0; i-- {
 		nodes, err := t.storage.FindNodesByLevel(t.ctx, t.mtAddress, i)
 		if err != nil {
-			t.Error("printTree FindOneByLeafData err: ", err)
+			t.Error("PrintTree FindOneByLeafData err: ", err)
 			return err
 		}
 
 		for _, node := range nodes {
-			t.Error(fmt.Sprintf("printTree level=%d, levelNo=%d", node.Level, node.LevelNo), node)
+			t.Error(fmt.Sprintf("PrintTree level=%d, levelNo=%d", node.Level, node.LevelNo), node)
 		}
 	}
 

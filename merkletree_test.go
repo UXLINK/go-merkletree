@@ -53,7 +53,7 @@ func TestMemAppend(t *testing.T) {
 		return
 	}
 
-	_ = tree.printTree()
+	_ = tree.PrintTree()
 
 	err = tree.AppendLeaf("0x00440DC3377A8a6b745aB5F92fD850b7c7291DdE")
 	if err != nil {
@@ -67,7 +67,7 @@ func TestMemAppend(t *testing.T) {
 		return
 	}
 
-	_ = tree.printTree()
+	_ = tree.PrintTree()
 
 	err = tree.AppendLeaf("0x7e533CF779A533eD8f9C1b8E5C3d7F936335ca54")
 	if err != nil {
@@ -75,7 +75,7 @@ func TestMemAppend(t *testing.T) {
 		return
 	}
 
-	_ = tree.printTree()
+	_ = tree.PrintTree()
 
 	// proof
 	proofes, err := tree.GenerateProof("0x7e533CF779A533eD8f9C1b8E5C3d7F936335ca54")
@@ -129,7 +129,7 @@ func TestMemAppend2(t *testing.T) {
 		return
 	}
 
-	_ = tree.printTree()
+	_ = tree.PrintTree()
 
 	// proof
 	proofes, err := tree.GenerateProof("0x7e533CF779A533eD8f9C1b8E5C3d7F936335ca54")
@@ -189,7 +189,7 @@ func TestRedisAppend1(t *testing.T) {
 		return
 	}
 
-	_ = tree.printTree()
+	_ = tree.PrintTree()
 
 	// proof
 	proofes, err := tree.GenerateProof("0x63120cc1c7Bb0a42C2D77D27faB9EDd2560F9cA3")
@@ -258,7 +258,7 @@ func TestRedisAppend2(t *testing.T) {
 		return
 	}
 
-	_ = tree.printTree()
+	_ = tree.PrintTree()
 
 	// proof
 	proofes, err := tree.GenerateProof("0x7e533CF779A533eD8f9C1b8E5C3d7F936335ca54")
