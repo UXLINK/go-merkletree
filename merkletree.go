@@ -122,7 +122,7 @@ func (t *MerkleTree) AppendLeaf(data string) error {
 					hash = keccak256.Bytes2Hex(keccak256.HashBranch(branch[levelNo].Hash, branch[levelNo+1].Hash))
 				}
 
-				if root.Level == i && levelNo == 1 && branch[levelNo+1] == nil {
+				if root.Level == i && levelNo == 0 && branch[levelNo+1] == nil {
 					needCreateRoot = false
 				}
 			}

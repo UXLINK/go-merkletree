@@ -2,6 +2,7 @@ package db
 
 import (
 	"context"
+	"encoding/json"
 	"errors"
 )
 
@@ -30,4 +31,13 @@ type Storage interface {
 	FindOneByLeafData(ctx context.Context, address string, data string) (*TreeNode, error)
 	FindMultiTreeNode(ctx context.Context, address string, nodePoses []*NodePos) ([]*TreeNode, error)
 	FindNodesByLevel(ctx context.Context, address string, level int) ([]*TreeNode, error)
+}
+
+func (tn *TreeNode) ToString() string {
+	jsonStr, err := json.Marshal(tn)
+	if err != nil {
+		return ""
+	}
+
+	return string(jsonStr)
 }
